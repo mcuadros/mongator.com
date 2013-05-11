@@ -12,6 +12,7 @@ app.config(['$routeProvider', function($routeProvider, $httpProvider) {
 
 
 
+
 //service style, probably the simplest one
 app.factory('$github', ['$http', '$markdown', function($http, $markdown) {
     return {
