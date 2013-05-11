@@ -1,0 +1,18 @@
+<span ng-bind="page"></span>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+        Search: <input ng-model="query">
+
+
+        <ul>
+            <li ng-repeat="document in documents | filter:query " >
+                <a href="#/doc/{{document.folder}}/{{document.filename}}">{{document.name}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="span10" ng-bind-html-unsafe="document">
+    </div>
+  </div>
+</div>
