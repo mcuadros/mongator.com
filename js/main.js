@@ -14,6 +14,7 @@ require([
     'controllers/body',
     'controllers/home',
     'controllers/page',
+    'services/documentation',
     'services/github',
     'services/markdown',
     'libs/showdown/showdown'

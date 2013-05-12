@@ -1,18 +1,26 @@
 define(['app'], function(app) {
   'use strict';
 
-    app.controller('DocumentCtrl', ['$scope', '$github', '$routeParams',
-        function($scope, $github, $routeParams) {
-            var file = $routeParams.file;
-            var folder = $routeParams.folder;
+    app.controller('DocumentCtrl', ['$scope', '$github', '$location', '$documentation', '$routeParams',
+        function($scope, $github, $location, $documentation, $routeParams) {
+            var module = $routeParams.folder;
+            var file = 'introduction.rst';
+            
+            if ( $routeParams.file ) file = $routeParams.file
+            var route = module + '/' + file;
 
-            $github.file('mcuadros', 'mandango-docs', folder + '/' + file, function(html) {
+            $github.file($scope.github.owner, $scope.github.documentation, route, function(html) {
                 $scope.document = html;
             });
 
-            $github.list('mcuadros', 'mandango-docs', folder, function(documents) {
+            $documentation.documents(module, function(documents) {
                 $scope.documents = documents;
             });
+
+            $scope.current = {
+                file: $documentation.label(file),
+                module:  $documentation.label(module),
+            };
         }
     ]);
 });

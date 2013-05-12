@@ -1,18 +1,27 @@
-<span ng-bind="page"></span>
+<div class="container">
+    <div class="row">
 
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span2">
-        Search: <input ng-model="query">
+          <div class="span3 bs-docs-sidebar">
+            <div><input type="text" class="span3" ng-model="query" placeholder="Search"></div>
 
+            <ul class="nav nav-tabs nav-stacked ">
+                <li ng-repeat="document in documents | filter:query " >
+                    <a ng-click="changeDocument($event, document.name)" href="#/doc/{{document.folder}}/{{document.name}}">
+                        {{document.label}}
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-        <ul>
-            <li ng-repeat="document in documents | filter:query " >
-                <a href="#/doc/{{document.folder}}/{{document.filename}}">{{document.name}}</a>
-            </li>
-        </ul>
+        <div class="span9">
+            <ul class="breadcrumb">
+              <li>Learn<span class="divider">/</span></li>
+              <li>{{current.module}}<span class="divider">/</span></li>
+              <li class="active">{{current.file}}</li>
+            </ul>
+            <div ng-bind-html-unsafe="document" />
+        </div>
     </div>
-    <div class="span10" ng-bind-html-unsafe="document">
-    </div>
-  </div>
 </div>
+
+

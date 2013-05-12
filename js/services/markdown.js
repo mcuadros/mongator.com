@@ -1,5 +1,5 @@
 define(['app'], function(app) {
-  'use strict';
+    'use strict';
 
     app.factory('$markdown', function($http) {
         var converter = new Showdown.converter();

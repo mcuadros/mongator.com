@@ -1,9 +1,13 @@
 define(['app'], function(app) {
-  'use strict';
+    'use strict';
 
-  app.controller('HomeController', ['$scope',
-    function($scope) {
-      $scope.foo = 'Hello AngularJS sandbox';
-    }
-  ]);
+    app.controller('HomeCtrl', ['$scope', '$github',
+        function($scope, $github) {
+
+            $github.tags($scope.config.github.owner, $scope.config.github.project, function(tags) {
+                $scope.latest = tags[0];
+                console.log($scope.latest);
+            });
+        }
+    ]);
 });

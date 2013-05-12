@@ -1,25 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AngularJS sandbox</title>
+  <title>{{config.project}} {{config.tagline}}</title>
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-responsive.css">
+
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body ng-controller="BodyController">
-<div class="container">
-  <div class="row">
-    <div class="span12">
-      <ul class="nav nav-pills">
-        <li ng-class="{active: isLinkCurrent('/')}"><a href="#/">Home</a></li>
-        <li ng-class="{active: isLinkCurrent('/page/one')}"><a href="#/page/one">One</a></li>
-        <li ng-class="{active: isLinkCurrent('/page/two')}"><a href="#/page/two">Two</a></li>
-        <li ng-class="{active: isLinkCurrent('/page/three')}"><a href="#/page/three">Three</a></li>
-      </ul>
 
-      <div ng-view class="hero-unit" data-ng-animate="{enter: 'view-enter', leave: 'view-leave'}"></div>
+    <div class="container">
+        <div class="masthead">
+            <ul class="nav nav-pills pull-right">
+                <li ng-class="{active: isLinkCurrent('/')}"><a href="#/">Home</a></li>
+                <li class="dropdown ">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Learn <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+
+                        <li ng-repeat="module in header.modules | filter:query " >
+                            <a href="#/doc/{{module.name}}">
+                                {{module.label}}
+                            </a>
+                        </li>
+
+                        <li role="presentation" class="divider"></li>
+                        <li><a href="#">Developer API</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{header.github}}">Github</a></li>
+
+            </ul>
+            <h3 class="muted">{{config.project}}</h3>
+        </div>
+        <hr>
     </div>
-  </div>
-</div>
-<script type="text/javascript" data-main="js/main" src="js/libs/require.js"></script>
+
+    <div class="container" 
+        ng-view class="hero-unit" 
+        data-ng-animate="{enter: 'view-enter', leave: 'view-leave'}"
+    ></div>
+
+
+    <div class="container">
+        <footer>
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
+    </div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript" data-main="js/main" src="js/libs/bootstrap.min.js"></script>
+    <script type="text/javascript" data-main="js/main" src="js/libs/holder.js"></script>
+    <script type="text/javascript" data-main="js/main" src="js/libs/require.js"></script>
 </body>
 </html>
+
+
+
+
