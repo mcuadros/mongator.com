@@ -1,5 +1,5 @@
 define(['app'], function(app) {
-  'use strict';
+    'use strict';
 
     app.controller('DocumentCtrl', ['$scope', '$github', '$location', '$documentation', '$routeParams',
         function($scope, $github, $location, $documentation, $routeParams) {
@@ -9,13 +9,8 @@ define(['app'], function(app) {
             if ( $routeParams.file ) file = $routeParams.file
             var route = module + '/' + file;
 
-            $github.file($scope.github.owner, $scope.github.documentation, route, function(html) {
-                $scope.document = html;
-            });
-
-            $documentation.documents(module, function(documents) {
-                $scope.documents = documents;
-            });
+            $documentation.document(route, function(html) { $scope.document = html; });
+            $documentation.documents(module, function(documents) { $scope.documents = documents; });
 
             $scope.current = {
                 file: $documentation.label(file),

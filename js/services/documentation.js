@@ -39,6 +39,11 @@ define(['app'], function(app) {
                     cb(modules)
                 });
             },
+            document: function(file, cb) {
+                $github.file($rootScope.config.github.owner, $rootScope.config.github.documentation, file, function(html) {
+                    cb(html)
+                });
+            },
         }
     }]);
 
