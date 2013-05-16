@@ -1,0 +1,190 @@
+.container{
+	background: none repeat scroll 0 0 #1D1F22;
+	font-family: 'Open Sans',sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.logo{
+	background: url("../img/logo.png") no-repeat scroll 0 0 transparent;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 135px;
+    width: 200px;
+}
+
+.row{
+	width: auto;
+	height: 434px;
+    background: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.row_two{
+	background: none repeat scroll 0 0 #202225;
+    height: 417px;
+    padding: 97px 0;
+    width: auto;
+}
+
+.textLogo{
+    font-family: 'Open Sans',sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 1;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 8.25;
+    text-align: center;
+    width: 263px;
+}
+
+.secondLine{
+	color: #3B884D;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 31px;
+    font-weight: 100;
+    line-height: 1;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 420px;
+}
+
+.imgLeft{
+	background: url("../img/foto1.png") no-repeat scroll 0 0 transparent;
+    margin-top: 63px;
+    padding-bottom: 86px;
+    width: 83px;
+}
+
+.imgRight{
+	background: url("../img/foto2.png") no-repeat scroll 0 0 transparent;
+    float: right;
+    margin-top: -86px;
+    padding-bottom: 86px;
+    padding-right: 81px;
+}
+
+.titLeft{
+    margin-top: 28px;
+    padding-bottom: 86px;
+    width: 151px;
+}
+
+.titRight{
+    float: right;
+    margin-top: -106px;
+    padding-bottom: 86px;
+    padding-right: 21px;
+}
+
+.textLeft{
+    font-size: 12px;
+    font-weight: 100;
+    height: 46px;
+    letter-spacing: 2px;
+    margin-top: 18px;
+    padding-bottom: 129px;
+    text-align: center;
+    width: 237px;
+}
+
+.textRight{
+    float: right;
+    font-size: 12px;
+    font-weight: 100;
+    height: 46px;
+    letter-spacing: 2px;
+    margin-top: -173px;
+    padding-bottom: 129px;
+    text-align: center;
+    width: 269px;
+}
+
+
+.containerTwo{
+	height: 86px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 409px;
+}
+
+.containerTit{
+	color: #49534B;
+    font-size: 16px;
+    font-weight: 400;
+    height: 19px;
+    line-height: 1;
+    margin-left: auto;
+    margin-right: auto;
+    width: 499px;
+    letter-spacing: 1px;
+}
+
+.containerText{
+	color: #49534B;
+    font-size: 16px;
+    font-weight: 400;
+    height: 86px;
+    line-height: 1;
+    margin-left: auto;
+    margin-right: auto;
+    width: 589px;
+}
+.jumbotron h2{
+	color: #3B884D;
+	font-weight: 100;
+}
+
+.jumbotron p{
+	font-weight: 100;
+}
+
+.jumbotron{
+	height: 287px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.lead{
+	width: 317px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.btn-large2 {
+	color: #FFFFFF;
+    padding: 11px 19px;
+    background-color: #3B884D;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 11px;
+}
+
+.map{
+	color: #3B884D;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 1;
+    margin-left: auto;
+    margin-right: auto;
+    width: 256px;
+
+}
+
+.footer{
+	height: 164px;
+}
+
+.button{
+    padding-top: 20px;
+}
