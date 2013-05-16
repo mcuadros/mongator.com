@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/bootstrap-responsive.css">
 
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/custom.css">
 </head>
 <body ng-controller="BodyController">
 
@@ -32,13 +33,12 @@
             </ul>
             <h3 class="muted">{{config.project}}</h3>
         </div>
-        <hr>
     </div>
 
     <div class="container" 
         ng-view class="hero-unit" 
-        data-ng-animate="{enter: 'view-enter', leave: 'view-leave'}"
-    ></div>
+        data-ng-animate="{enter: 'view-enter', leave: 'view-leave'}">
+    </div>
 
 
     <div class="container">
