@@ -1,8 +1,7 @@
 define(['app'], function (app) {
   'use strict';
 
-  app.config(['$routeProvider',
-    function ($routeProvider) {
+    app.config(function ($routeProvider) {
         $routeProvider
             .when('/doc/:folder', {
                 controller: 'DocumentCtrl',
@@ -20,9 +19,9 @@ define(['app'], function (app) {
                 redirectTo: '/'
             });
         }
-    ]);
+    );
 
-    app.run(function ($rootScope, $location, $http, $timeout, $documentation) {
+    app.run(function ($rootScope) {
         $rootScope.config = {
             project: 'Mongator ODM',
             tagline: 'small, fast & simple mongodb ODM for PHP',

@@ -17,17 +17,20 @@
   src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
 }
 
+body {
+ color: #49534b;
+}
 
 .container{
-	background: none repeat scroll 0 0 #1D1F22;
-	font-family: 'Open Sans',sans-serif;
+    background: none repeat scroll 0 0 #1D1F22;
+    font-family: 'Open Sans',sans-serif;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
 }
 
 .logo{
-	background: url("../img/logo.png") no-repeat scroll 0 0 transparent;
+    background: url("../img/logo.png") no-repeat scroll 0 0 transparent;
     height: 60px;
     margin-left: auto;
     margin-right: auto;
@@ -36,11 +39,11 @@
 }
 
 .row{
-	width: auto;
-	height: 434px;
+    width: auto;
+    height: 434px;
     background: url(../img/background.png);
     background-repeat: no-repeat;
-    background-attachment: fixed;
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -48,10 +51,11 @@
 }
 
 .row_two{
-	background: none repeat scroll 0 0 #202225;
-    height: 417px;
+    background: none repeat scroll 0 0 #202225;
+
     padding: 97px 0;
     width: auto;
+    text-align: center;
 }
 
 .textLogo{
@@ -68,7 +72,7 @@
 }
 
 .secondLine{
-	color: #3B884D;
+    color: #3B884D;
     font-family: 'Open Sans',sans-serif;
     font-size: 31px;
     font-weight: 100;
@@ -80,14 +84,14 @@
 }
 
 .imgLeft{
-	background: url("../img/foto1.png") no-repeat scroll 0 0 transparent;
+    background: url("../img/foto1.png") no-repeat scroll 0 0 transparent;
     margin-top: 63px;
     padding-bottom: 86px;
     width: 83px;
 }
 
 .imgRight{
-	background: url("../img/foto2.png") no-repeat scroll 0 0 transparent;
+    background: url("../img/foto2.png") no-repeat scroll 0 0 transparent;
     float: right;
     margin-top: -86px;
     padding-bottom: 86px;
@@ -132,14 +136,14 @@
 
 
 .containerTwo{
-	height: 86px;
+    height: 86px;
     margin-left: auto;
     margin-right: auto;
     width: 409px;
 }
 
 .containerTit{
-	color: #49534B;
+    color: #49534B;
     font-size: 16px;
     font-weight: 400;
     height: 19px;
@@ -151,7 +155,7 @@
 }
 
 .containerText{
-	color: #49534B;
+    color: #49534B;
     font-size: 16px;
     font-weight: 400;
     height: 86px;
@@ -160,29 +164,32 @@
     margin-right: auto;
     width: 589px;
 }
-.jumbotron h2{
-	color: #3B884D;
-	font-weight: 100;
+section h2{
+    color: #3B884D;
+    font-weight: 100;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 39px;
 }
 
 .jumbotron p{
-	font-weight: 100;
+    font-weight: 100;
 }
 
 .jumbotron{
-	height: 287px;
     margin: 40px 0;
+    padding: 100px 0;
     text-align: center;
 }
 
 .lead{
-	width: 317px;
-	margin-left: auto;
-	margin-right: auto;
+    width: 317px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btn-large2 {
-	color: #FFFFFF;
+    color: #FFFFFF;
     padding: 11px 19px;
     background-color: #3B884D;
     font-weight: 700;
@@ -191,21 +198,36 @@
 }
 
 .map{
-	color: #3B884D;
+    color: #3B884D;
     font-family: 'Open Sans',sans-serif;
     font-size: 20px;
     font-weight: 100;
     line-height: 1;
     margin-left: auto;
+    text-align: left;
     margin-right: auto;
     width: 256px;
-
 }
 
 .footer{
-	height: 164px;
+    height: 164px;
 }
 
 .button{
     padding-top: 20px;
+}
+.summaryBlock {
+    display: inline-block;
+    width: 300px;
+    margin: 0 60px;
+    margin-top: 50px;
+    vertical-align: top;
+}
+.summaryBlock > h3 {
+    padding-top: 110px;
+    font-size: 20px;
+    background: url("../img/foto1.png") no-repeat scroll 50% 0 transparent;
+}
+.summaryBlock + .summaryBlock > h3 {
+    background: url("../img/foto2.png") no-repeat scroll 50% 0 transparent;
 }
