@@ -10,6 +10,7 @@ require.config({
 
 require([
     'app',
+    'config',
     'routers/router',
     'controllers/body',
     'controllers/home',

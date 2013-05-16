@@ -1,7 +1,7 @@
 define(['app'], function(app) {
     'use strict';
 
-    app.controller('DocumentCtrl', function($scope, github, documentation, $routeParams) {
+    app.controller('DocumentCtrl', function($scope, $routeParams, github, documentation) {
         var module = $routeParams.folder;
         var file = 'introduction.rst';
 
