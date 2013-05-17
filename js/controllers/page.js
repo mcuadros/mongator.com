@@ -1,19 +1,18 @@
-define(['app'], function(app) {
+define(['app'],function(app) {
     'use strict';
 
-    app.controller('DocumentCtrl', function($scope, $routeParams, github, documentation) {
+    app.controller('PageController', function($scope, $routeParams, documentHtml, documents, docFile, docModule) {
         var module = $routeParams.folder;
         var file = 'introduction.rst';
-
-        if ( $routeParams.file ) file = $routeParams.file
+        if ( $routeParams.file ) file = $routeParams.file;
         var route = module + '/' + file;
 
-        documentation.document(route, function(html) { $scope.document = html; });
-        documentation.documents(module, function(documents) { $scope.documents = documents; });
+        $scope.document = documentHtml;
+        $scope.documents = documents;
 
         $scope.current = {
-            file: documentation.label(file),
-            module:  documentation.label(module),
+            file: docFile,
+            module: docModule
         };
     });
 });

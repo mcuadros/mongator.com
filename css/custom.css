@@ -17,8 +17,13 @@
   src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
  color: #49534b;
+ background-color: #1D1F22;
 }
 
 .container{
@@ -230,4 +235,22 @@ section h2{
 }
 .summaryBlock + .summaryBlock > h3 {
     background: url("../img/foto2.png") no-repeat scroll 50% 0 transparent;
+}
+.shades {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    opacity: 0.5;
+    background-color: #000000;
+}
+.shades.active {
+    display: block !important;
+}
+.shades > .circle {
+    height: 100%;
+    background: url("../img/loading.gif") no-repeat scroll 50% 50% transparent;
 }
