@@ -1,36 +1,49 @@
-define(['app'], function (app) {
+define(
+    [
+        'app',
+        'resolves/docFileResolve',
+        'resolves/docModuleResolve',
+        'resolves/documentHtmlResolve',
+        'resolves/documentsResolve',
+        'resolves/ghTagsResolve'
+    ], function (
+        app,
+        docFileResolve,
+        docModuleResolve,
+        documentHtmlResolve,
+        documentsResolve,
+        ghTagsResolve
+    ) {
   'use strict';
 
-  app.config(['$routeProvider',
-    function ($routeProvider) {
-        $routeProvider
-            .when('/doc/:folder', {
-                controller: 'DocumentCtrl',
-                templateUrl: 'js/templates/page/default.html'
-            })
-            .when('/doc/:folder/:file', {
-                controller: 'DocumentCtrl',
-                templateUrl: 'js/templates/page/default.html'
-            })
-            .when('/', {
-                controller: 'HomeCtrl',
-                templateUrl: 'js/templates/home/default.html'
-            })
-            .otherwise({
-                redirectTo: '/'
+    app.config(function($routeProvider) {
+        $routeProvider.when('/doc/:folder', {
+                controller: 'PageController',
+                templateUrl: 'js/templates/page/default.html',
+                resolve: {
+                    documentHtml: documentHtmlResolve,
+                    documents: documentsResolve,
+                    docFile: docFileResolve,
+                    docModule: docModuleResolve
+                }
             });
-        }
-    ]);
-
-    app.run(function ($rootScope, $location, $http, $timeout, $documentation) {
-        $rootScope.config = {
-            project: 'Mongator ODM',
-            tagline: 'small, fast & simple mongodb ODM for PHP',
-            github: {
-                owner: 'mongator',
-                project: 'mongator',
-                documentation: 'documentation'
+        $routeProvider.when('/doc/:folder/:file', {
+            controller: 'PageController',
+            templateUrl: 'js/templates/page/default.html',
+            resolve: {
+                documentHtml: documentHtmlResolve,
+                documents: documentsResolve,
+                docFile: docFileResolve,
+                docModule: docModuleResolve
             }
-        };
+        });
+        $routeProvider.when('/', {
+            controller: 'HomeController',
+            templateUrl: 'js/templates/home/default.html',
+            resolve: {ghTags:ghTagsResolve}
+        });
+        $routeProvider.otherwise({
+                redirectTo: '/'
+        });
     });
 });
