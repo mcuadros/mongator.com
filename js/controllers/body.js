@@ -13,5 +13,7 @@ define(['app'], function(app) {
         });
 
         $scope.config = config;
+
+
     });
 });
