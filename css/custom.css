@@ -188,3 +188,20 @@
 .button{
     padding-top: 20px;
 }
+.span3{
+    text-align: right;
+    padding-left: 100px;
+}
+.nav-tabs.nav-stacked > li > a{
+    border:0;
+}
+input[class*="span"]{
+    background-color: transparent;
+    border: 0;
+}
+.nav > li> a:hover{
+    text-decoration: none;
+}
+a{
+    color: #333333;
+}
