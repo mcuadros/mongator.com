@@ -1,23 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-cloak>
 <head>
   <title>{{config.project}} {{config.tagline}}</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap-responsive.css">
 
   <link rel="stylesheet" href="css/main.css">
-</head>
-<body ng-controller="BodyController">
+  <link rel="stylesheet" href="css/custom.css">
+    <style type="text/css">
+        @charset "UTF-8";
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none;
+        }
 
+        ng\:form {
+            display: block;
+        }
+    </style>
+</head>
+<body data-ng-controller="BodyController">
     <div class="container">
         <div class="masthead">
             <ul class="nav nav-pills pull-right">
-                <li ng-class="{active: isLinkCurrent('/')}"><a href="#/">Home</a></li>
+                <li data-ng-class="{active: isLinkCurrent('/')}"><a href="#/">Home</a></li>
                 <li class="dropdown ">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Learn <b class="caret"></b></a>
                     <ul class="dropdown-menu">
 
-                        <li ng-repeat="module in header.modules | filter:query " >
+                        <li data-ng-repeat="module in header.modules" >
                             <a href="#/doc/{{module.name}}">
                                 {{module.label}}
                             </a>
@@ -30,15 +40,11 @@
                 <li><a href="{{header.github}}">Github</a></li>
 
             </ul>
-            <h3 class="muted">{{config.project}}</h3>
+            <h3 class="muted">{{ title }}</h3>
         </div>
-        <hr>
     </div>
 
-    <div class="container" 
-        ng-view class="hero-unit" 
-        data-ng-animate="{enter: 'view-enter', leave: 'view-leave'}"
-    ></div>
+    <div class="container" data-ng-view class="hero-unit"></div>
 
 
     <div class="container">
@@ -47,10 +53,12 @@
             <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
         </footer>
     </div>
-    
+
+    <div data-ng-controller="ProgressController" class="shades" data-ng-class="active">
+        <div class="circle" data-ng-cloak></div>
+    </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script type="text/javascript" data-main="js/main" src="js/libs/bootstrap.min.js"></script>
-    <script type="text/javascript" data-main="js/main" src="js/libs/holder.js"></script>
     <script type="text/javascript" data-main="js/main" src="js/libs/require.js"></script>
 </body>
 </html>

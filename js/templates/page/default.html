@@ -1,12 +1,11 @@
-<div class="container">
-    <div class="row">
-
+<div>
+    <div>
           <div class="span3 bs-docs-sidebar">
-            <div><input type="text" class="span3" ng-model="query" placeholder="Search"></div>
+            <div><input type="text" class="span3" data-ng-model="query" placeholder="Search"></div>
 
             <ul class="nav nav-tabs nav-stacked ">
-                <li ng-repeat="document in documents | filter:query " >
-                    <a ng-click="changeDocument($event, document.name)" href="#/doc/{{document.folder}}/{{document.name}}">
+                <li data-ng-repeat="document in documents | filter:query " >
+                    <a data-ng-click="changeDocument($event, document.name)" href="#/doc/{{document.folder}}/{{document.name}}">
                         {{document.label}}
                     </a>
                 </li>
@@ -19,7 +18,7 @@
               <li>{{current.module}}<span class="divider">/</span></li>
               <li class="active">{{current.file}}</li>
             </ul>
-            <div ng-bind-html-unsafe="document" />
+            <div data-ng-bind-html-unsafe="document" />
         </div>
     </div>
 </div>

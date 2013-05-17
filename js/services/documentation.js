@@ -1,7 +1,7 @@
 define(['app'], function(app) {
     'use strict';
 
-    app.factory('$documentation', ['$github', '$rootScope', function($github, $rootScope) {
+    app.factory('documentation', function($rootScope, github, config) {
         return {
             label: function(filename) {
                 var words = []
@@ -13,7 +13,7 @@ define(['app'], function(app) {
             },
             modules: function(cb) {
                 var self = this;
-                $github.list($rootScope.config.github.owner, $rootScope.config.github.documentation, '/', function(documents) {
+                github.list(config.github.owner, config.github.documentation, '/', function(documents) {
                     var modules = [];
                     for (var i = documents.length - 1; i >= 0; i--) {
                         if ( documents[i].type == 'dir' && documents[i].name != 'images' ) {
@@ -27,7 +27,7 @@ define(['app'], function(app) {
             },
             documents: function(module, cb) {
                 var self = this;
-                $github.list($rootScope.config.github.owner, $rootScope.config.github.documentation, module, function(documents) {
+                github.list(config.github.owner, config.github.documentation, module, function(documents) {
                     var modules = [];
                     for (var i = documents.length - 1; i >= 0; i--) {
                         if ( documents[i].type == 'file' ) {
@@ -40,11 +40,11 @@ define(['app'], function(app) {
                 });
             },
             document: function(file, cb) {
-                $github.file($rootScope.config.github.owner, $rootScope.config.github.documentation, file, function(html) {
+                github.file(config.github.owner, config.github.documentation, file, function(html) {
                     cb(html)
                 });
             },
         }
-    }]);
+    });
 
 });
