@@ -1,7 +1,7 @@
 define(['app'], function(app) {
     'use strict';
 
-    app.factory('$github', ['$http', '$markdown', function($http, $markdown) {
+    app.factory('github', function($http, markdown) {
         return {
             api: 'https://api.github.com',
             site: 'http://github.com',
@@ -21,7 +21,7 @@ define(['app'], function(app) {
 
             tags: function(user, repository, cb) {
                 self = this;
-                
+
                 $http.get(this.refs(user, repository), {
                     cache: true,
                     withCredentials: false
@@ -36,12 +36,12 @@ define(['app'], function(app) {
                                     zip: self.zip(user, repository, label),
                                     ref: data[i].ref,
                                     url: data[i].url,
-                                }); 
+                                });
                             }
                         };
 
                         cb(tags);
-                    }   
+                    }
                 );
             },
             list: function(user, repository, folder, cb) {
@@ -60,7 +60,7 @@ define(['app'], function(app) {
                         };
 
                         cb(documents);
-                    }   
+                    }
                 );
             },
             file: function(user, repository, file, cb) {
@@ -73,13 +73,13 @@ define(['app'], function(app) {
                         if (!input) return false;
 
                         input = input.replace(/\s/g, '');
-                        cb($markdown.from(
+                        cb(markdown.from(
                             atob(input)
                         ));
                     }
                 );
             }
         }
-    }]);
+    });
 
 });
