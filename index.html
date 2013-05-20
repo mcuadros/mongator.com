@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-cloak>
 <head>
   <title>{{config.project}} {{config.tagline}}</title>
   <link rel="stylesheet" href="css/bootstrap.css">
@@ -40,13 +40,11 @@
                 <li><a href="{{header.github}}">Github</a></li>
 
             </ul>
-            <h3 class="muted">{{config.project}}</h3>
+            <h3 class="muted">{{ title }}</h3>
         </div>
     </div>
 
-    <div class="container"
-        data-ng-view class="hero-unit">
-    </div>
+    <div class="container" data-ng-view class="hero-unit"></div>
 
 
     <div class="container">

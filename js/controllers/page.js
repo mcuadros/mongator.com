@@ -1,7 +1,7 @@
 define(['app'],function(app) {
     'use strict';
 
-    app.controller('PageController', function($scope, $routeParams, documentHtml, documents, docFile, docModule) {
+    app.controller('PageController', function($rootScope, $scope, $routeParams, config, documentHtml, documents, docFile, docModule) {
         var module = $routeParams.folder;
         var file = 'introduction.rst';
         if ( $routeParams.file ) file = $routeParams.file;
@@ -14,5 +14,6 @@ define(['app'],function(app) {
             file: docFile,
             module: docModule
         };
+        $rootScope.title = config.project;
     });
 });
