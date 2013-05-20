@@ -4,6 +4,6 @@ define(['app'], function(app) {
     app.controller('HomeController', function($rootScope, $scope, ghTags, config) {
         $scope.latest = ghTags;
 
-        $rootScope.title = '';
+        $rootScope.logo = 'hidden';
     });
 });

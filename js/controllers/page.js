@@ -14,6 +14,6 @@ define(['app'],function(app) {
             file: docFile,
             module: docModule
         };
-        $rootScope.title = config.project;
+        $rootScope.logo = 'active';
     });
 });
