@@ -349,10 +349,10 @@ padding-top: 18px;
 .muted {
 background: url("../img/logo.png") no-repeat scroll 0 0;
 width: 300px;
-height: 90px;
+height: 73px;
 padding: 0 46px 0 162px;
-margin-left: 300px;
-margin-top: 25px;
+margin-left: 384px;
+margin-top: 40px;
 }
 .breadcrumb > li {
     display: inline-block;
@@ -364,7 +364,7 @@ color: #3b884d;
 
 input[type="text"]{
     width: auto;
-    padding: 0 4px;
+    padding: 0 8px;
     height: 30px;
     color: #767676;     font-weight: bolder;     text-transform: uppercase;     font-size: 13px;
     font-family: 'Open Sans';
@@ -374,7 +374,6 @@ input[type="text"]{
 }
 .input{
     float: right;
-    width: 160px;
 }
 .span9{
     box-sizing: border-box;
@@ -392,8 +391,31 @@ font-size: 13px;
 .pull-right {
 float: left;
 padding-top: 12px;
-padding-left: 679px;
+padding-left: 664px;
+min-width: 373px;
 }
 .nav > li > .active {
     color: #3b884d;
+}
+.nav-pills > li > a {
+padding-top: 8px;
+padding-bottom: 8px;
+margin-top: 2px;
+margin-bottom: 2px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+color: #767676;
+margin-left: 2px;
+}
+div.input:after{
+    content: " ";
+    background: url(../img/glyphicons-halflings-white.png);
+    width: 16px;
+    height: 14px;
+    min-height: -14px;
+    display: block;
+    background-position: 423px 476px;
+    float: right;
+    margin-top: 9px;
 }
