@@ -42,7 +42,7 @@ html, body {
     height: 60px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 135px;
+    margin-top: 190px;
     width: 200px;
 }
 
@@ -51,7 +51,7 @@ width: 717px;
 }
 .row{
     width: auto;
-    height: 434px;
+    height: 504px;
     background: url(../img/background.png);
     background-repeat: no-repeat;
 
@@ -202,7 +202,7 @@ section h2{
 .btn-large2 {
     color: #FFFFFF;
     padding: 11px 19px;
-    background-color: #3B884D;
+    background-color: #197245;
     font-weight: 700;
     letter-spacing: 1px;
     font-size: 11px;
@@ -221,8 +221,23 @@ section h2{
 }
 
 .footer{
-    height: 164px;
+    height: 102px;
+    text-align: center;
+    padding-top: 17px;
+    letter-spacing: 1px;
 }
+.heart{
+    height: 10px;
+}
+.powered{
+  background: url(../img/medium_logo.png) no-repeat center 20px;
+  background-size: 103px;
+  background-position-y: 11px;
+  height: 100%;
+  padding-top: 7px;
+  padding-left: 2px;
+}
+
 
 .button{
     padding-top: 20px;
@@ -287,8 +302,8 @@ a{
     background: url("../img/foto1.png") no-repeat scroll 50% 0 transparent;
 }
     p {
-    margin: 0 0 10px;
-    padding-top: 16px;
+    margin: 0 0 11px;
+    padding-top: 12px;
     font-family: 'Open Sans',sans-serif; 
     font-size: 17px;
     color: #767676;
@@ -503,4 +518,21 @@ pre {
 .nav > li > a:hover, .nav > li > a:focus {
     text-decoration: none;
     background-color: none;
+}
+a:hover, a:focus {
+    background-color: #52ae7f;
+    text-decoration: none;
+}
+a:active {
+    background-color: #23a161;
+    text-decoration: none;
+}
+p.heart {
+margin: 0 0 11px;
+padding-top: 12px;
+font-family: 'Open Sans',sans-serif;
+font-size: 17px;
+color: #767676;
+padding-right: 86px;
+display: block;
 }
