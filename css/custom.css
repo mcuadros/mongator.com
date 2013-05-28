@@ -27,6 +27,12 @@ html, body {
      min-width: 996px;
 }
 
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
 .container{
     background: none repeat scroll 0 0 #181a1c;
     font-family: 'Open Sans',sans-serif;
@@ -35,6 +41,7 @@ html, body {
     margin-right: auto;
     width: 100%;
     height: 0;
+    clear: both;
 }
 
 .logo{
@@ -44,6 +51,9 @@ html, body {
     margin-right: auto;
     margin-top: 190px;
     width: 200px;
+}
+.ng-scope > * {
+    clear:both;
 }
 
 .boxText {
@@ -59,7 +69,15 @@ width: 717px;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    margin-top: -60px;
 }
+
+.dropdown:hover {
+display: block;
+transition: height 250ms ease-in-out 250ms;
+overflow: hidden;
+}
+
 
 .row_two{
     background: none repeat scroll 0 0 #202225;
@@ -68,6 +86,7 @@ width: 717px;
     width: auto;
     text-align: center;
 }
+
 
 .textLogo{
     font-family: 'Open Sans',sans-serif;
@@ -351,7 +370,7 @@ blockquote {
     float: left; 
     height: auto; 
     clear: both;
-    margin-left: -226px !important;
+    margin-left: -245px !important;
 }
 h1 {
     font-size: 33.5px;
@@ -365,13 +384,25 @@ h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizelegibility;
     padding-top: 18px;
 }
+
+hr{
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #E0E0E0 -moz-use-text-color #FFFFFF;
+    border-image: none;
+    border-width: 1px 0;
+    clear: both;
+    margin: -35px 0;
+}
 .muted {
     background: url("../img/logo.png") no-repeat scroll 100% 0;
     width: 300px;
     height: 73px;
     margin-top: 40px;
     padding-left: 50%;
-    margin-left: -597px;
+    margin-left: -306px;
 }
 .breadcrumb > li {
     display: inline-block;
@@ -415,7 +446,7 @@ ul, ol {
 .pull-right, .breadcrumb {
     padding-top: 12px;
     padding-left: 50%;
-    margin-left: -250px;}
+    margin-left: -268px;}
     .nav-pills > li > a {
     padding-top: 8px;
     padding-bottom: 8px;
@@ -514,8 +545,15 @@ pre {
     color: #3b884d;
     border-color: #999999;
     background-color: transparent;
+    height: 60px;
+    overflow: hidden;
+    padding: 13px;
+    position: relative;
+    transition: height 250ms ease-in-out 250ms;
+    width: 100%;
 }
-.nav > li > a:hover, .nav > li > a:focus {
+
+.nav > li > a:hover, .nav > li{
     text-decoration: none;
     background-color: none;
 }
@@ -535,4 +573,9 @@ font-size: 17px;
 color: #767676;
 padding-right: 86px;
 display: block;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+text-decoration: none;
+background-color: none;
 }
