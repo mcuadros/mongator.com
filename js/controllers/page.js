@@ -1,7 +1,7 @@
 define(['app'],function(app) {
     'use strict';
 
-    app.controller('PageController', function($rootScope, $scope, $routeParams, config, documentHtml, documents, docFile, docModule) {
+    app.controller('PageController', function($timeout, $rootScope, $scope, $routeParams, config, documentHtml, documents, docFile, docModule) {
         var module = $routeParams.folder;
         var file = 'introduction.rst';
         if ( $routeParams.file ) file = $routeParams.file;
@@ -15,5 +15,8 @@ define(['app'],function(app) {
             module: docModule
         };
         $rootScope.logo = 'active';
+
+        //highlight.js
+        $timeout(function () { $('pre code').each(function(i, e) {hljs.highlightBlock(e)}); }, 0);
     });
 });
