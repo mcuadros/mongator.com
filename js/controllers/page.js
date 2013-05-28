@@ -17,6 +17,6 @@ define(['app'],function(app) {
         $rootScope.logo = 'active';
 
         //highlight.js
-        $timeout(function () { $('pre code').each(function(i, e) {hljs.highlightBlock(e)}); }, 0);
+        $timeout(function () { $('pre > code').each(function(i, e) {hljs.highlightBlock(e)}); }, 0);
     });
 });

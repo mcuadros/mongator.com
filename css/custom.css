@@ -305,7 +305,7 @@ input[class*="span"]{
     background-color: #202225;
 }
 a{
-    color: #333333;
+    color: #767676;
 }
 
 .summaryBlock {
@@ -478,6 +478,7 @@ div.input:after{
 .menuTop{
     float:left;
 }
+
 .dropdown-menu .divider {
     height: 1px;
     margin: 9px 1px;
@@ -494,71 +495,18 @@ div.input:after{
     font-size: 13px;
     color: #767676;
 }
-code {
-    padding: 2px 4px;
-    color: #d14;
-    white-space: nowrap;
-    border: 1px solid #181a1c;
-    background-color: #181a1c;
-    color: #767676;
-}
-code, pre {
-    padding: 0 3px 2px;
-    font-family: Monaco, Menlo, Consolas, "Open Sans", monospace;
-    font-size: 12px;
-    color: #767676;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
-pre {
-    display: block;
-    padding: 9.5px;
-    margin: 0 0 10px;
-    font-size: 13px;
-    line-height: 20px;
-    word-break: break-all;
-    word-wrap: break-word;
-    white-space: pre;
-    white-space: pre-wrap;
-    background-color: #181a1c;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    font-family: 'Open Sans',sans-serif; font-size: 17px;
-}
-.menuTop:after {
-    background: url(../img/glyphicons-halflings.png);
-    width: 16px;
-    height: 14px;
-    background-position: 159px 41px;
-    float: right;
-    margin-top: -26px;
-    top: 0;
-    margin-right: 79px;
-    right: 5px;
-    position: relative;
-}
+
 .nav-tabs .open .dropdown-toggle, .nav-pills .open .dropdown-toggle, .nav > li.dropdown.open.active > a:hover, .nav > li.dropdown.open.active > a:focus {
     color: #3b884d;
     border-color: #999999;
-    background-color: transparent;
-    height: 60px;
-    overflow: hidden;
-    padding: 13px;
-    position: relative;
-    transition: height 250ms ease-in-out 250ms;
-    width: 100%;
+    background-color: transparent !important;
 }
 
 .nav > li > a:hover, .nav > li{
     text-decoration: none;
-    background-color: none;
+    background-color: transparent;
 }
 a:hover, a:focus {
-    background-color: #52ae7f;
     text-decoration: none;
 }
 a:active {
@@ -576,6 +524,39 @@ display: block;
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
-text-decoration: none;
-background-color: none;
+    text-decoration: none;
+    background-color: none;
+}
+
+#menu{
+    padding-top: 55px;
+    float: left;
+    background-color: #151618;
+    width: 100%;
+    height: 13px;
+    margin-left: -18px
+}
+#menu > ul {
+    margin-top: -40px;
+    list-style-type: none;
+    padding-left: 50%;
+    margin-left: -294px;
+} 
+.submenu {
+    display: inline-block;
+    padding-left: 63px;
+    font-size: 14px;
+}
+pre {
+    background-color: #181a1c;
+}
+
+.container pre > code {
+    font-size: 13px;
+    font-family: monospace;
+    background-color: transparent;
+}
+.divid:after{
+    background: url("../img/glyphicons-halflings.png") no-repeat scroll 50% 0;
+    background-position: 423px 476px;
 }
