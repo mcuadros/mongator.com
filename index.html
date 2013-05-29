@@ -25,24 +25,23 @@
     <div class="container">
         <div class="masthead">
             <ul class="nav nav-pills pull-right menuTop">
-                <li data-ng-class="{}"><a href="#/">Home</a></li>
-                <li class="dropdown ">
+                <li class="homeLink" data-ng-class="{}"><a href="#/">Home</a></li>
+                <li>
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Learn</a>
                 </li>
-                <li><a href="{{header.github}}">Github</a></li>
-
+                <li class="gitH"><a href="{{header.github}}">Github</a></li>
+                <div id="menu">
+                  <ul>
+                      <li class="submenu" data-ng-repeat="module in header.modules" >
+                          <a class ="submenu" href="#/doc/{{module.name}}">
+                              {{module.label}}
+                          </a>
+                      </li>
+                      <li class="submenudivid"><a href="#">Developer API</a></li>
+                  </ul>
+                </div>
             </ul>
             <h3 class="muted" data-ng-class="logo"></h3>
-             <div id="menu">
-                    <ul>
-                        <li class="submenu" data-ng-repeat="module in header.modules" >
-                            <a class ="asubmenu" href="#/doc/{{module.name}}">
-                                {{module.label}}
-                            </a>
-                        </li>
-                        <li class="submenu divid"><a href="#">Developer API</a></li>
-                    </ul>
-            </div>
         </div>
     </div>
 

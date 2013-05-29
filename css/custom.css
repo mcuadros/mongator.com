@@ -370,7 +370,8 @@ blockquote {
     float: left; 
     height: auto; 
     clear: both;
-    margin-left: -245px !important;
+    margin-left: -249px !important;
+    padding-left: 50%;
 }
 h1 {
     font-size: 33.5px;
@@ -444,9 +445,7 @@ ul, ol {
     font-size: 13px;
 }
 .pull-right, .breadcrumb {
-    padding-top: 12px;
-    padding-left: 50%;
-    margin-left: -268px;}
+    padding-top: 12px;}
     .nav-pills > li > a {
     padding-top: 8px;
     padding-bottom: 8px;
@@ -456,7 +455,7 @@ ul, ol {
     -moz-border-radius: 5px;
     border-radius: 5px;
     color: #767676;
-    margin-left: 10px;
+    margin-left: 7px;
 }
 div.input:after{
     content: " ";
@@ -503,8 +502,9 @@ div.input:after{
 }
 
 .nav > li > a:hover, .nav > li{
+    -ms-transition-delay: 250ms;
     text-decoration: none;
-    background-color: transparent;
+    background-color: transparent;         
 }
 a:hover, a:focus {
     text-decoration: none;
@@ -529,23 +529,28 @@ display: block;
 }
 
 #menu{
-    padding-top: 55px;
-    float: left;
     background-color: #151618;
-    width: 100%;
-    height: 13px;
-    margin-left: -18px
-}
-#menu > ul {
-    margin-top: -40px;
-    list-style-type: none;
+    height: 0px;
+    position: relative;
+    overflow: hidden;     
+    -webkit-transition: height 250ms ease-in-out; 
+    -moz-transition: height 250ms ease-in-out; 
+    -ms-transition: height 250ms ease-in-out; 
+    -o-transition: height 250ms ease-in-out; 
+    transition: height 250ms ease-in-out; 
+    -webkit-transition-delay: 250ms; 
+    -moz-transition-delay: 250ms; 
+    -ms-transition-delay: 250ms; 
+    -o-transition-delay: 250ms; 
+    transition-delay: 250ms;
     padding-left: 50%;
-    margin-left: -294px;
-} 
+    margin-left: -270px;
+}
 .submenu {
     display: inline-block;
-    padding-left: 63px;
     font-size: 14px;
+    padding-right: 29px;
+    padding-top: 4px;
 }
 pre {
     background-color: #181a1c;
@@ -556,7 +561,19 @@ pre {
     font-family: monospace;
     background-color: transparent;
 }
-.divid:after{
-    background: url("../img/glyphicons-halflings.png") no-repeat scroll 50% 0;
-    background-position: 423px 476px;
+.submenudivid {
+display: inline-block;
+padding-left: 0px;
+font-size: 14px;
+}
+.submenudivid:after {
+background: url(../img/glyphicons-halflings-white.png) scroll 50% 0;
+background-position: 64px 64px;
+}
+li:hover + li + #menu{
+    height: 37px;
+}
+.homeLink {
+    padding-left: 50%;
+    margin-left: -270px;
 }
