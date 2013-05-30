@@ -22,27 +22,33 @@
   </style>
 </head>
 <body data-ng-controller="BodyController">
-    <div class="container">
-        <div class="masthead">
-            <ul class="nav nav-pills pull-right menuTop">
-                <li class="homeLink" data-ng-class="{}"><a href="#/">Home</a></li>
-                <li>
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Learn</a>
-                </li>
-                <li class="gitH"><a href="{{header.github}}">Github</a></li>
-                <div id="menu">
-                  <ul>
-                      <li class="submenu" data-ng-repeat="module in header.modules" >
-                          <a class ="submenu" href="#/doc/{{module.name}}">
-                              {{module.label}}
-                          </a>
-                      </li>
-                      <li class="submenudivid"><a href="#">Developer API</a></li>
-                  </ul>
-                </div>
-            </ul>
-            <h3 class="muted" data-ng-class="logo"></h3>
-        </div>
+    <div class="headerMon">
+        <div class="logo"></div>
+            <div class="containMenu">
+              <ul class="nav nav-pills pull-right menuHome">
+                  <li data-ng-class="{}" class="home"><a href="#/">Home</a></li>
+                  <li>
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Learn</a>
+                  </li>
+                  <li><a href="{{header.github}}">Github</a></li>
+                  <div id="menu">
+                    <ul>
+                        <li class="submenu" data-ng-repeat="module in header.modules" >
+                            <a class ="submenu" href="#/doc/{{module.name}}">
+                                {{module.label}}
+                            </a>
+                        </li>
+                        <li class="submenudivid"><a href="#">Developer API</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="breadcrumbHolder">
+                <ul class="breadcrumb">
+                  <li>Learn<span class="divider">/</span></li>
+                  <li>{{current.module}}<span class="divider">/</span></li>
+                  <li class="active">{{current.file}}</li>
+                </ul>
+            </div>
     </div>
 
     <div class="container" data-ng-view class="hero-unit">
