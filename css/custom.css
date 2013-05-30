@@ -49,8 +49,8 @@ html, body {
     height: 47px;
     margin-left: 24%;
     margin-top: 26px;
-    position: absolute;
     width: 200px;
+    float:left;
 }
 .ng-scope > * {
     clear:both;
@@ -364,10 +364,9 @@ blockquote {
     color: #767676;
     font-size: 13px;
     font-weight: bolder;
-    margin-left: -14%;
-    padding: 0 0 0 50%;
+    margin-left: -260px;
+    padding-left: 50%;
     text-transform: uppercase;
-    width: 100%;
 }
 h1 {
     font-size: 33.5px;
@@ -536,6 +535,7 @@ p.heart {
     font-size: 14px;
     padding-right: 29px;
     padding-top: 4px;
+    width:100%;
 }
 pre {
     background-color: #181a1c;
@@ -555,9 +555,10 @@ pre {
     background: url(../img/glyphicons-halflings-white.png) scroll 50% 0;
     background-position: 64px 64px;
 }
-li:hover + li + #menu, .nav li a:hover{
+li:hover + #menu{
     height: 37px;
 }
+
 .menuTop {
     float: left;
 }
@@ -565,14 +566,14 @@ li:hover + li + #menu, .nav li a:hover{
     height: 147px;
 }
 .containMenu {
-     border: 1px solid;
-    float: left;
     height: 100%;
-    padding-top: 24px;
     width: 100%;
 }
 .menuHome{
-     border: 1px solid;
-    padding-left: 35%;
-    width: 100%;
+    float:left;
+    margin-top: 23px;
+}
+.git{
+    margin-left: 142px;
+    margin-top: -47px;
 }
