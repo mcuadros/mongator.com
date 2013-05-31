@@ -52,6 +52,14 @@ html, body {
     width: 200px;
     float:left;
 }
+.logoHome{
+    background: url("../img/logo.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 135px;
+    width: 200px;
+}
 .ng-scope > * {
     clear:both;
 }
@@ -69,7 +77,6 @@ html, body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-top: -60px;
 }
 
 .dropdown:hover {
@@ -359,13 +366,14 @@ blockquote {
     background: url("../img/loading.gif") no-repeat scroll 50% 50% transparent;
 }
 .breadcrumb{
-    background-color: #181A1C;
+     background-color: #181A1C;
     border: 0 none;
     color: #767676;
     font-size: 13px;
     font-weight: bolder;
     margin-left: -260px;
-    padding-left: 50%;
+    margin-top: -55px;
+    padding-left: 51%;
     text-transform: uppercase;
 }
 h1 {
@@ -527,15 +535,17 @@ p.heart {
     height: 0;
     margin-top: 47px;
     overflow: hidden;
-    transition: height 250ms ease-in-out 250ms;
+    transition:height 250ms ease-in-out 250ms;
+    -webkit-transition:height 250ms ease-in-out 250ms;
     width: 100%;
+    text-align: center;
+    padding-left: 135px;
 }
 .submenu {
     display: inline-block;
     font-size: 14px;
     padding-right: 29px;
     padding-top: 4px;
-    width:100%;
 }
 pre {
     background-color: #181a1c;
@@ -563,17 +573,23 @@ li:hover + #menu{
     float: left;
 }
 .headerMon {
-    height: 147px;
+    height: 171px;
 }
 .containMenu {
     height: 100%;
     width: 100%;
 }
 .menuHome{
-    float:left;
+    float: left;
     margin-top: 23px;
+    width: 100%;
+    position: absolute;
 }
 .git{
     margin-left: 142px;
     margin-top: -47px;
+}
+.home{
+    margin-left: -283px;
+    padding-left: 50%;
 }

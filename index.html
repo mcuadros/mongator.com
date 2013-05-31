@@ -30,17 +30,17 @@
                   <li>
                       <a class="dropdown-toggle" data-toggle="dropdown" href="#">Learn</a>
                   </li>
+                    <div id="menu">
+                      <ul>
+                          <li class="submenu" data-ng-repeat="module in header.modules" >
+                              <a class ="submenu" href="#/doc/{{module.name}}">
+                                  {{module.label}}
+                              </a>
+                          </li>
+                          <li class="submenudivid"><a href="#">Developer API</a></li>
+                      </ul>
+                    </div>
                   <li><a href="{{header.github}}">Github</a></li>
-                  <div id="menu">
-                    <ul>
-                        <li class="submenu" data-ng-repeat="module in header.modules" >
-                            <a class ="submenu" href="#/doc/{{module.name}}">
-                                {{module.label}}
-                            </a>
-                        </li>
-                        <li class="submenudivid"><a href="#">Developer API</a></li>
-                    </ul>
-                  </div>
             </div>
             <div class="breadcrumbHolder">
                 <ul class="breadcrumb">
