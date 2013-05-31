@@ -540,6 +540,10 @@ p.heart {
     width: 100%;
     text-align: center;
     padding-left: 135px;
+    top: 9px;
+    left: 0;
+    right: 0;
+    position: absolute;
 }
 .submenu {
     display: inline-block;
