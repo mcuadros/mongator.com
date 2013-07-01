@@ -7,51 +7,51 @@
 
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/custom.css">
-    <style type="text/css">
-        @charset "UTF-8";
-        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-            display: none;
-        }
+  <link rel="stylesheet" href="/highlight.js/styles/tomorrow-night.css">
+  <script src="/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <style type="text/css">
+    @charset "UTF-8";
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+      display: none;
+    }
 
-        ng\:form {
-            display: block;
-        }
-    </style>
+    ng\:form {
+      display: block;
+    }
+  </style>
 </head>
 <body data-ng-controller="BodyController">
-    <div class="container">
-        <div class="masthead">
-            <ul class="nav nav-pills pull-right">
-                <li data-ng-class="{active: isLinkCurrent('/')}"><a href="#/">Home</a></li>
-                <li class="dropdown ">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Learn <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-
-                        <li data-ng-repeat="module in header.modules" >
-                            <a href="#/doc/{{module.name}}">
-                                {{module.label}}
-                            </a>
-                        </li>
-
-                        <li role="presentation" class="divider"></li>
-                        <li><a href="#">Developer API</a></li>
-                    </ul>
-                </li>
-                <li><a href="{{header.github}}">Github</a></li>
-
-            </ul>
-            <h3 class="muted">{{ title }}</h3>
-        </div>
+    <div class="headerMon">
+        <div class="logo"></div>
+            <div class="containMenu">
+              <ul class="nav nav-pills pull-right menuHome">
+                  <li data-ng-class="{}" class="home"><a href="#/">Home</a></li>
+                  <li>
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Learn</a>
+                  </li>
+                    <div id="menu">
+                      <ul>
+                          <li class="submenu" data-ng-repeat="module in header.modules" >
+                              <a class ="submenu" href="#/doc/{{module.name}}">
+                                  {{module.label}}
+                              </a>
+                          </li>
+                          <li class="submenudivid"><a href="#">Developer API</a></li>
+                      </ul>
+                    </div>
+                  <li><a href="{{header.github}}">Github</a></li>
+            </div>
+            <div class="breadcrumbHolder">
+                <ul class="breadcrumb">
+                  <li>Learn<span class="divider">/</span></li>
+                  <li>{{current.module}}<span class="divider">/</span></li>
+                  <li class="active">{{current.file}}</li>
+                </ul>
+            </div>
     </div>
 
-    <div class="container" data-ng-view class="hero-unit"></div>
-
-
-    <div class="container">
-        <footer>
-            <p class="pull-right"><a href="#">Back to top</a></p>
-            <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-        </footer>
+    <div class="container" data-ng-view class="hero-unit">
     </div>
 
     <div data-ng-controller="ProgressController" class="shades" data-ng-class="active">

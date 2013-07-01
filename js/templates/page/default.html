@@ -1,7 +1,7 @@
 <div>
-    <div>
+    <div class="containerScope">
           <div class="span3 bs-docs-sidebar">
-            <div><input type="text" class="span3" data-ng-model="query" placeholder="Search"></div>
+            <div class="input"><input type="text" class="span3" data-ng-model="query" placeholder="Search"></div>
 
             <ul class="nav nav-tabs nav-stacked ">
                 <li data-ng-repeat="document in documents | filter:query " >
@@ -13,14 +13,15 @@
         </div>
 
         <div class="span9">
-            <ul class="breadcrumb">
-              <li>Learn<span class="divider">/</span></li>
-              <li>{{current.module}}<span class="divider">/</span></li>
-              <li class="active">{{current.file}}</li>
-            </ul>
-            <div data-ng-bind-html-unsafe="document" />
+            <div data-ng-bind-html-unsafe="document" class="boxText"/>
         </div>
+    
     </div>
+     <footer class="footer">
+          <p>Hecho con <span class="heart"><img src="../img/heart.png"></span> desde Chamber&iacute;</p>
+          <p class="powered">Powered by:</p>
+
+         </footer>
 </div>
 
 

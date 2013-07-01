@@ -18,34 +18,58 @@
 }
 
 html, body {
-    height: 100%;
+    height: auto;
 }
 
-body {
- color: #49534b;
- background-color: #1D1F22;
+    body {
+     color: #49534b;
+     background-color: #181a1c;
+     min-width: 996px;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
 .container{
-    background: none repeat scroll 0 0 #1D1F22;
+    background: none repeat scroll 0 0 #181a1c;
     font-family: 'Open Sans',sans-serif;
+    font-size: 17px;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    height: 0;
+    clear: both;
 }
 
 .logo{
     background: url("../img/logo.png") no-repeat scroll 0 0 transparent;
-    height: 60px;
+    height: 47px;
+    margin-left: 24%;
+    margin-top: 26px;
+    width: 200px;
+    float:left;
+}
+.logoHome{
+    background: url("../img/logo.png") no-repeat scroll 0 0 transparent;
+    height: 47px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 135px;
     width: 200px;
 }
+.ng-scope > * {
+    clear:both;
+}
 
+.boxText {
+    width: 717px;
+}
 .row{
     width: auto;
-    height: 434px;
+    height: 504px;
     background: url(../img/background.png);
     background-repeat: no-repeat;
 
@@ -55,6 +79,13 @@ body {
     background-size: cover;
 }
 
+.dropdown:hover {
+    display: block;
+    transition: height 250ms ease-in-out 250ms;
+    overflow: hidden;
+}
+
+
 .row_two{
     background: none repeat scroll 0 0 #202225;
 
@@ -62,6 +93,7 @@ body {
     width: auto;
     text-align: center;
 }
+
 
 .textLogo{
     font-family: 'Open Sans',sans-serif;
@@ -196,7 +228,7 @@ section h2{
 .btn-large2 {
     color: #FFFFFF;
     padding: 11px 19px;
-    background-color: #3B884D;
+    background-color: #197245;
     font-weight: 700;
     letter-spacing: 1px;
     font-size: 11px;
@@ -215,12 +247,74 @@ section h2{
 }
 
 .footer{
-    height: 164px;
+    height: 102px;
+    text-align: center;
+    padding-top: 17px;
+    letter-spacing: 1px;
 }
+.heart{
+    height: 10px;
+}
+.powered{
+    background: url(../img/medium_logo.png) no-repeat center 20px;
+    background-size: 103px;
+    background-position-y: 11px;
+    height: 100%;
+    padding-top: 7px;
+    padding-left: 2px;
+}
+
 
 .button{
     padding-top: 20px;
 }
+
+.span3{
+    text-align: right;
+}
+.span3.bs-docs-sidebar {
+    min-height: 1px;
+    margin-left: 0px;
+    padding: 10px 30px 0 0;
+    background-color: #1d1f22;
+    box-sizing: border-box;
+    width: 50%;
+    min-width: 240px;
+}
+
+.nav-tabs.nav-stacked > li > a{
+    border:0;
+    color: #767676;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding:8px 0;
+    float: right;
+    clear: both;
+    width: 160px;
+    width: 100%;
+}
+input[class*="span"]{
+    background-color: transparent;
+    border: 0;
+}
+.nav > li > a:hover{
+    text-decoration: none;
+    background-color: #181a1c;
+    color: #3b884d;
+}
+
+    [class*="span"] {
+    float: left;
+    min-height: 1px;
+    margin-left: 0;
+    padding: 0 49px;
+    background-color: #202225;
+}
+a{
+    color: #767676;
+}
+
 .summaryBlock {
     display: inline-block;
     width: 300px;
@@ -233,6 +327,22 @@ section h2{
     font-size: 20px;
     background: url("../img/foto1.png") no-repeat scroll 50% 0 transparent;
 }
+p {
+    margin: 0 0 11px;
+    padding-top: 12px;
+    font-family: 'Open Sans',sans-serif; 
+    font-size: 17px;
+    color: #767676;
+}
+h2 {
+    font-size: 25.5px;
+    color: #767676;
+}
+blockquote {
+    padding: 0 0 0 15px;
+    margin: 0 0 20px;
+    border-left: 5px solid #767676;
+}
 .summaryBlock + .summaryBlock > h3 {
     background: url("../img/foto2.png") no-repeat scroll 50% 0 transparent;
 }
@@ -242,6 +352,7 @@ section h2{
     top: 0;
     bottom: 0;
     left:0;
+    height: auto;
     right: 0;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
     opacity: 0.5;
@@ -253,4 +364,236 @@ section h2{
 .shades > .circle {
     height: 100%;
     background: url("../img/loading.gif") no-repeat scroll 50% 50% transparent;
+}
+.breadcrumb{
+     background-color: #181A1C;
+    border: 0 none;
+    color: #767676;
+    font-size: 13px;
+    font-weight: bolder;
+    margin-left: -260px;
+    margin-top: -55px;
+    padding-left: 51%;
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 33.5px;
+    color: #3b884d;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+    font-family: inherit;
+    font-weight: 100;
+    line-height: 40px;
+    text-rendering: optimizelegibility;
+    padding-top: 18px;
+}
+
+hr{
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #E0E0E0 -moz-use-text-color #FFFFFF;
+    border-image: none;
+    border-width: 1px 0;
+    clear: both;
+    margin: -35px 0;
+}
+.muted {
+    background: url("../img/logo.png") no-repeat scroll 100% 0;
+    height: 56px;
+    padding-left: 50%;
+    clear: both;
+    margin-left: -303px;
+    margin-top: -117px;
+    display: block;
+    float: left;
+}
+.breadcrumb > li {
+    display: inline-block;
+    text-shadow: 0 1px 0;
+}
+.breadcrumb > .active {
+    color: #3b884d;
+}
+
+input[type="text"]{
+    width: auto;
+    padding: 0 8px;
+    height: 30px;
+    color: #767676;     font-weight: bolder;     text-transform: uppercase;     font-size: 13px;
+    font-family: 'Open Sans';
+    padding-right: 25px;
+}
+.containerScope{
+    margin-left: -547px;
+    overflow: hidden;
+    background-color: #1d1f22;
+}
+.input{
+    float: right;
+    position: relative;
+}
+.span9{
+    box-sizing: border-box;
+    width: 50%;
+    padding: 20px 0 0 30px;
+    min-height: 1249px;
+}
+ul, ol {
+    padding: 0;
+    margin: 0 0 10px 25px;
+    color: #767676;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.pull-right, .breadcrumb {
+    padding-top: 12px;}
+    .nav-pills > li > a {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #767676;
+    margin-left: 7px;
+}
+div.input:after{
+    content: " ";
+    background: url(../img/glyphicons-halflings-white.png);
+    width: 16px;
+    height: 14px;
+    min-height: -14px;
+    display: block;
+    background-position: 423px 476px;
+    float: right;
+    margin-top: 9px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+.navHome{
+    width: none;
+}
+
+.dropdown-menu .divider {
+    height: 1px;
+    margin: 9px 1px;
+    overflow: hidden;
+    background-color: #767676;
+    border-bottom: 1px solid #767676;
+}
+.nav-pills .dropdown-menu {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background-color: #181a1c;
+    font-family: 'Open Sans';
+    font-size: 13px;
+    color: #767676;
+}
+
+.nav-tabs .open .dropdown-toggle, .nav-pills .open .dropdown-toggle, .nav > li.dropdown.open.active > a:hover, .nav > li.dropdown.open.active > a:focus {
+    color: #3b884d;
+    border-color: #999999;
+    background-color: transparent !important;
+}
+
+.nav > li > a:hover, .nav > li{
+    -ms-transition-delay: 250ms;
+    text-decoration: none;
+    background-color: transparent;         
+}
+a:hover, a:focus {
+    text-decoration: none;
+}
+a:active {
+    background-color: #23a161;
+    text-decoration: none;
+}
+p.heart {
+    margin: 0 0 11px;
+    padding-top: 12px;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 17px;
+    color: #767676;
+    padding-right: 86px;
+    display: block;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: none;
+}
+
+#menu{
+    background-color: #151618;
+    height: 0;
+    margin-top: 47px;
+    overflow: hidden;
+    transition:height 250ms ease-in-out 250ms;
+    -webkit-transition:height 250ms ease-in-out 250ms;
+    width: 100%;
+    text-align: center;
+    padding-left: 135px;
+    top: 9px;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+.submenu {
+    display: inline-block;
+    font-size: 14px;
+    padding-right: 29px;
+    padding-top: 4px;
+}
+pre {
+    background-color: #181a1c;
+}
+
+.container pre > code {
+    font-size: 13px;
+    font-family: monospace;
+    background-color: transparent;
+}
+.submenudivid {
+    display: inline-block;
+    padding-left: 0px;
+    font-size: 14px;
+}
+.submenudivid:after {
+    background: url(../img/glyphicons-halflings-white.png) scroll 50% 0;
+    background-position: 64px 64px;
+}
+li:hover + #menu{
+    height: 37px;
+}
+
+.menuTop {
+    float: left;
+}
+.headerMon {
+    height: 171px;
+}
+.containMenu {
+    height: 100%;
+    width: 100%;
+}
+.menuHome{
+    float: left;
+    margin-top: 23px;
+    width: 100%;
+    position: absolute;
+}
+.git{
+    margin-left: 142px;
+    margin-top: -47px;
+}
+.home{
+    margin-left: -283px;
+    padding-left: 50%;
 }
