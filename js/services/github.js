@@ -1,16 +1,20 @@
 define(['app'], function(app) {
     'use strict';
 
-    app.factory('github', function($http, markdown) {
+    app.factory('github', function($http, markdown,config) {
         return {
             api: 'https://api.github.com',
             site: 'http://github.com',
 
+            oAuthLogin: function(urlResource){
+                return config.github.token ? urlResource+'?access_token='+config.github.token : urlResource;
+            },
+
             contents: function(user, repository, route) {
-                return this.api + '/repos/' + user + '/' + repository + '/contents/' +  route;
+                return this.oAuthLogin(this.api + '/repos/' + user + '/' + repository + '/contents/' +  route);
             },
             refs: function(user, repository) {
-                return this.api + '/repos/' + user + '/' + repository + '/git/refs/tags';
+                return this.oAuthLogin(this.api + '/repos/' + user + '/' + repository + '/git/refs/tags');
             },
             user: function(user) {
                 return this.site + '/' + user;
