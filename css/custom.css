@@ -267,7 +267,10 @@ section h2{
     height: 100%;
     padding-top: 7px;
     padding-left: 2px;
+    display: block;
 }
+.powered:hover{color:#3B884D;}
+.powered>span{display: none;}
 
 
 .button{
