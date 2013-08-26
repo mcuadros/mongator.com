@@ -10,7 +10,7 @@ define(['app'],function(app) {
         $scope.document = documentHtml;
         $scope.documents = documents;
 
-        $scope.current = {
+        $rootScope.current = {
             file: docFile,
             module: docModule
         };
