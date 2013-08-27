@@ -45,19 +45,24 @@ html, body {
 }
 
 .logo{
-    background: url("../img/logo.png") no-repeat scroll 0 0 transparent;
     height: 47px;
-    margin-left: 24%;
-    margin-top: 26px;
-    width: 200px;
     float:left;
+    margin-top: 23px;
+    min-width: 240px;
+    width: 50%;
+    text-align: right;
+}
+.logo>img{
+    height: 47px;
+    width: 200px;
+    margin-right: 22px;
 }
 .logoHome{
     background: url("../img/logo.png") no-repeat scroll 0 0 transparent;
     height: 47px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 135px;
+    margin-top: 180px;
     width: 200px;
 }
 .ng-scope > * {
@@ -262,7 +267,10 @@ section h2{
     height: 100%;
     padding-top: 7px;
     padding-left: 2px;
+    display: block;
 }
+.powered:hover{color:#3B884D;}
+.powered>span{display: none;}
 
 
 .button{
@@ -281,6 +289,9 @@ section h2{
     width: 50%;
     min-width: 240px;
 }
+.bs-docs-sidebar>.input>input{
+    box-shadow: none;
+}
 
 .nav-tabs.nav-stacked > li > a{
     border:0;
@@ -298,13 +309,17 @@ input[class*="span"]{
     background-color: transparent;
     border: 0;
 }
+
 .nav > li > a:hover{
     text-decoration: none;
     background-color: #181a1c;
+}
+.nav > li > a:hover,
+#menu > ul > li > a:hover {
     color: #3b884d;
 }
 
-    [class*="span"] {
+[class*="span"] {
     float: left;
     min-height: 1px;
     margin-left: 0;
@@ -365,16 +380,20 @@ blockquote {
     height: 100%;
     background: url("../img/loading.gif") no-repeat scroll 50% 50% transparent;
 }
+
+.breadcrumbHolder{
+    float: left;
+    width: 100%;
+}
 .breadcrumb{
-     background-color: #181A1C;
+    background-color: #181A1C;
     border: 0 none;
     color: #767676;
     font-size: 13px;
     font-weight: bolder;
-    margin-left: -260px;
-    margin-top: -55px;
-    padding-left: 51%;
     text-transform: uppercase;
+    margin:30px 0 0;
+    padding-left: 20px;
 }
 h1 {
     font-size: 33.5px;
@@ -506,7 +525,7 @@ div.input:after{
 .nav > li > a:hover, .nav > li{
     -ms-transition-delay: 250ms;
     text-decoration: none;
-    background-color: transparent;         
+    background-color: transparent;
 }
 a:hover, a:focus {
     text-decoration: none;
@@ -533,14 +552,26 @@ p.heart {
 #menu{
     background-color: #151618;
     height: 0;
-    margin-top: 47px;
     overflow: hidden;
     transition:height 250ms ease-in-out 250ms;
     -webkit-transition:height 250ms ease-in-out 250ms;
-    width: 100%;
-    text-align: center;
-    padding-left: 135px;
-    top: 9px;
+}
+#menu > ul{
+    margin-left: 50%;
+    margin-top: 1px;
+    padding-left: 20px;
+}
+.dropdown-toggle:after {
+  background: url("/img/glyphicons-halflings-white.png") repeat scroll -314px -119px transparent;
+  content: "";
+  display: block;
+  float: right;
+  height: 12px;
+  margin-left: 5px;
+  width: 12px;
+}
+#menuContainer {
+    top: 75px;
     left: 0;
     right: 0;
     position: absolute;
@@ -569,7 +600,7 @@ pre {
     background: url(../img/glyphicons-halflings-white.png) scroll 50% 0;
     background-position: 64px 64px;
 }
-li:hover + #menu{
+li:hover > div > #menu {
     height: 37px;
 }
 
@@ -578,22 +609,19 @@ li:hover + #menu{
 }
 .headerMon {
     height: 171px;
+    background-color: #181A1C;
 }
 .containMenu {
-    height: 100%;
-    width: 100%;
+    float:left;
+     height: 100%;
+    width: 50%;
 }
 .menuHome{
     float: left;
     margin-top: 23px;
     width: 100%;
-    position: absolute;
 }
 .git{
     margin-left: 142px;
     margin-top: -47px;
-}
-.home{
-    margin-left: -283px;
-    padding-left: 50%;
 }

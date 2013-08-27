@@ -7,6 +7,7 @@ define(['app'], function (app) {
         github: {
             owner: 'mongator',
             project: 'mongator',
+            token: 'bf6a5979081cee4462813f3fd42ba3acf58f74b6',
             documentation: 'documentation'
         }
     });

@@ -22,26 +22,28 @@
   </style>
 </head>
 <body data-ng-controller="BodyController">
-    <div class="headerMon">
-        <div class="logo"></div>
-            <div class="containMenu">
-              <ul class="nav nav-pills pull-right menuHome">
-                  <li data-ng-class="{}" class="home"><a href="#/">Home</a></li>
-                  <li>
-                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Learn</a>
-                  </li>
-                    <div id="menu">
-                      <ul>
-                          <li class="submenu" data-ng-repeat="module in header.modules" >
-                              <a class ="submenu" href="#/doc/{{module.name}}">
-                                  {{module.label}}
-                              </a>
-                          </li>
-                          <li class="submenudivid"><a href="#">Developer API</a></li>
-                      </ul>
+    <div class="headerMon containerScope">
+        <div class="logo"><img src="/img/logo.png" /></div>
+        <div class="containMenu">
+            <ul class="nav nav-pills pull-right menuHome">
+                <li data-ng-class="{}" class="home"><a href="#/">Home</a></li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Learn</a>
+                    <div id="menuContainer">
+                      <div id="menu" class="containerScope">
+                          <ul>
+                              <li class="submenu" data-ng-repeat="module in header.modules" >
+                                  <a class ="submenu" href="#/doc/{{module.name}}">
+                                      {{module.label}}
+                                  </a>
+                              </li>
+                              <li class="submenudivid"><a href="#">Developer API</a></li>
+                          </ul>
+                      </div>
                     </div>
-                  <li><a href="{{header.github}}">Github</a></li>
-            </div>
+                </li>
+                <li><a href="{{header.github}}">Github</a></li>
+            </ul>
             <div class="breadcrumbHolder">
                 <ul class="breadcrumb">
                   <li>Learn<span class="divider">/</span></li>
@@ -49,6 +51,7 @@
                   <li class="active">{{current.file}}</li>
                 </ul>
             </div>
+        </div>
     </div>
 
     <div class="container" data-ng-view class="hero-unit">
